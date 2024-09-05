@@ -1,0 +1,24 @@
+{
+  "name": "nutrimatic-html-dispenser",
+  "version": "0.1.0",
+  "description": "A simple HTML template engine.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LukeGeneva/nutrimatic-html-dispenser.git"
+  },
+  "author": "Luke Geneva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LukeGeneva/nutrimatic-html-dispenser/issues"
+  },
+  "homepage": "https://github.com/LukeGeneva/nutrimatic-html-dispenser#readme",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "prettier": "^3.3.3"
+  }
+}
