@@ -1,5 +1,5 @@
-const VALUE_REGEX = /\{\{\W*(\w+)\W*\}\}/g;
-const LOOP_REGEX = /\{\{\W*for\W+(\w+)\W*\}\}((\n|.)*)\{\{\W*\1\W*\}\}/g;
+const VALUE_REGEX = /\{\{\s*(\w+)\s*\}\}/g;
+const LOOP_REGEX = /\{\{\s*for\s+(\w+)\s*\}\}((\n|.)*)\{\{\s*\/\1\s*\}\}/g;
 
 function render(content = '', options = {}) {
   const loops = content.matchAll(LOOP_REGEX);
