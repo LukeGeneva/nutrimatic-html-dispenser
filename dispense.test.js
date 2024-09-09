@@ -19,8 +19,11 @@ test('that loops are handled', () => {
   {{/foo}}
 </ul>`;
   const html = render(source, { foo: ['bar', 'baz'] });
-  expect(html.includes('<li>bar</li>')).toBe(true);
-  expect(html.includes('<li>baz</li>')).toBe(true);
+  const expected = `<ul>
+  <li>bar</li>
+  <li>baz</li>
+</ul>`;
+  expect(html).toEqual(expected);
 });
 
 test('that nested loops are handled', () => {
@@ -36,5 +39,15 @@ test('that nested loops are handled', () => {
   const html = render(source, {
     foo: [{ bar: ['a', 'b'] }, { bar: ['c', 'd'] }],
   });
-  expect(html.includes('<div>c</div>')).toBe(true);
+  const expected = `<ul>
+  <li>
+      <div>a</div>
+      <div>b</div>
+  </li>
+  <li>
+      <div>c</div>
+      <div>d</div>
+  </li>
+</ul>`;
+  expect(html).toEqual(expected);
 });

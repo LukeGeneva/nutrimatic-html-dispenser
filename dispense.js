@@ -14,7 +14,7 @@ function render(content = '', options = {}) {
     return options[key] || options || '';
   });
 
-  return rendered;
+  return rendered.replaceAll(/\n\s*\n/g, '\n');
 }
 
 function renderLoop(loop, options) {
