@@ -51,3 +51,15 @@ test('that nested loops are handled', () => {
 </ul>`;
   expect(html).toEqual(expected);
 });
+
+test('that conditional (true) is rendered', () => {
+  const source = '{{ conditional ? <div>true</div> : <div>false</div> }}';
+  const html = render(source, { conditional: true });
+  expect(html).toEqual('<div>true</div> ');
+});
+
+test('that conditional (false) is rendered', () => {
+  const source = '{{ conditional ? <div>true</div> : <div>false</div> }}';
+  const html = render(source, { conditional: false });
+  expect(html).toEqual('<div>false</div> ');
+});

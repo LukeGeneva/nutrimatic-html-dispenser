@@ -1,0 +1,8 @@
+{{ import layout.html }}
+<p>My name is {{ name }}</p>
+<ul>
+  {{for list}}
+  <li>{{this}}</li>
+  {{/list}}
+</ul>
+{{ /layout.html }}
