@@ -63,3 +63,12 @@ test('that conditional (false) is rendered', () => {
   const html = render(source, { conditional: false });
   expect(html).toEqual('<div>false</div> ');
 });
+
+test('that loops can access outer variables', () => {
+  const source = `{{for foo}}{{outer}}{{inner}}{{/foo}}`;
+  const html = render(source, {
+    outer: 0,
+    foo: [{ inner: 1 }, { inner: 2 }],
+  });
+  expect(html).toEqual('0102');
+});

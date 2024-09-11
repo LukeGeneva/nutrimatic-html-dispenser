@@ -17,8 +17,10 @@ function render(content = '', options = {}) {
     rendered = rendered.replace(match.at(0), html);
   }
 
-  rendered = rendered.replace(VALUE_REGEX, (_match, key) => {
-    return options[key] || options || '';
+  rendered = rendered.replace(VALUE_REGEX, (match, key) => {
+    if (key === 'this') return options;
+    if (options[key] === undefined) return match;
+    return options[key];
   });
 
   return rendered.replaceAll(/\n\s*\n/g, '\n');
