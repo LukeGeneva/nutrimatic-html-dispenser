@@ -12,7 +12,7 @@
     "url": "git+https://github.com/LukeGeneva/nutrimatic-html-dispenser.git"
   },
   "author": "Luke Geneva",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/LukeGeneva/nutrimatic-html-dispenser/issues"
   },
