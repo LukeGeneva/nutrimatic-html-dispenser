@@ -58,14 +58,16 @@ Output:
 
 Easily import HTML files into your templates using the `{{ import }}` syntax:
 
+```html
 <!-- index.html -->
 <html>
-  <body>
-    {{ import header.html }}
-    <p>Welcome to the Nutrimatic HTML Dispenser!</p>
-    {{ import footer.html }}
-  </body>
+    <body>
+        {{ import header.html }}
+        <p>Welcome to the Nutrimatic HTML Dispenser!</p>
+        {{ import footer.html }}
+    </body>
 </html>
+```
 
 This simple syntax allows you to modularize your HTML and keep your files clean
 and easy to manage.
