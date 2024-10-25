@@ -6,7 +6,7 @@ const IMPORT_REGEX = /\{\{\s*import (\w+\.html)\s*\}\}/g;
 const IMPORT_WITH_CONTENT_REGEX =
   /\{\{\s*import\s+((\w+|\-+|_+)*.html)\s*\}\}\s*((.|\s)*)\{\{\s*\/\1\s*\}\}/g;
 
-function dispense(filepath, options, callback) {
+function dispense(filepath, options) {
   let content = fs.readFileSync(filepath, 'utf-8');
   const dir = path.dirname(filepath);
 
@@ -33,7 +33,7 @@ function dispense(filepath, options, callback) {
   }
 
   const rendered = render(content, options);
-  return callback(null, rendered);
+  return rendered;
 }
 
 module.exports = { dispense };
