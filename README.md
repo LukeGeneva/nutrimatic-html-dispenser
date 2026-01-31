@@ -1,6 +1,6 @@
 # Nutrimatic HTML Dispenser
 
-![Logo](images/logo.webp)
+![Logo](images/nutrimatic.jpg)
 
 Providing HTML almost, but not quite, entirely unlike React.
 
